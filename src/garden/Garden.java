@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class Garden<E> extends ArrayList<Plantable> implements Plantable {
     public double water(double amount) {
-        System.out.printf("\nWatering with %f.\n", amount);
+        System.out.printf("\nWatering with %.0f.\n", amount);
         int needy = 0;
         for (Plantable t : this) {
             if (t.needsWater());
