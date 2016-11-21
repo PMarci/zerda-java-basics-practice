@@ -20,7 +20,7 @@ public class Tree implements Plantable {
     }
 
     public double water(double amount) {
-        this.waterContent =+ 0.75*amount;
+        this.waterContent =+ 0.4*amount;
         return this.waterContent;
     }
 

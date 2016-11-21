@@ -1,27 +1,22 @@
 package garden;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
 
-/**
- * Created by posam on 2016-11-21.
- */
 public class Garden<E> extends ArrayList<Plantable> implements Plantable {
     public double water(double amount) {
         System.out.printf("\nWatering with %.0f.\n", amount);
         int needy = 0;
         for (Plantable t : this) {
-            if (t.needsWater());
+            if (t.needsWater()) {
                 needy++;
+            }
         }
         double dividedWater = amount / needy;
         for (Plantable t : this) {
             t.water(dividedWater);
             t.printNeed();
         }
-
+        needy = 0;
         return dividedWater;
     }
 
