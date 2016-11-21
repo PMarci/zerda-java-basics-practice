@@ -58,8 +58,6 @@ public class Garden<E> extends ArrayList<Plantable> implements Plantable {
     public static void main(String[] args) {
     Garden garden = new Garden(2, 2);
         garden.water(40);
-        garden.printNeed();
         garden.water(70);
-        garden.printNeed();
     }
 }
